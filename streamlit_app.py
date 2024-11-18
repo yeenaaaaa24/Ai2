@@ -1,7 +1,7 @@
 #이전 수업 시간에 만들었던 이미지 분류 pkl 파일을 바탕으로 한 이미지 분류 모델을 Streamlit에 올리는 예제 코드
 #파일 이름 streamlit_app.py
 
-import streamlit
+import streamlit as st
 from fastai.vision.all import *
 from PIL import Image
 import gdown
@@ -52,7 +52,7 @@ if uploaded_file is not None:
     st.markdown("<h3>클래스별 확률:</h3>", unsafe_allow_html=True)
 
     if prediction == labels[0]:
-         st.write("중냉")
+         st.write("중냉 꿋굿")
     elif prediction == labels[1]:
          st.write("짜장면은 굿")
     elif prediction == labels[2]:
